@@ -1,0 +1,2 @@
+[14-May-2015 15:41:10 America/Denver] PHP Notice:  Undefined index: captcha in /home1/vccservi/public_html/varnercc/assets/jquery-validation/demo/captcha/process.php on line 8
+[14-May-2015 15:41:10 America/Denver] PHP Notice:  Undefined index: captcha_id in /home1/vccservi/public_html/varnercc/assets/jquery-validation/demo/captcha/process.php on line 8

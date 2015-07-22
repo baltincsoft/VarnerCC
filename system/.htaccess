@@ -1,0 +1,74 @@
+# Do not remove this line or mod_rewrite rules and search engine friendly URLs will stop working
+<IfModule mod_rewrite.c>
+
+#RewriteBase /   # need this sucker
+
+Options +FollowSymLinks
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^demo.baltincsoft.com[nc]
+
+RewriteRule ^.*$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R]
+
+RewriteRule ^Home /index.php
+
+RewriteRule ^Login /login.php
+
+RewriteRule ^Link-Sent /link-sent.php
+
+RewriteRule ^Link-Expired /link-expired.php
+
+RewriteRule ^EmailExist /recordexists.php
+
+RewriteRule ^LogFailure /loginFailure.php
+
+RewriteRule ^Email-Not-Exist /notExist.php
+
+RewriteRule ^System /system/index.php
+
+RewriteRule ^Dashboard /system/index.php?action=view_dashboard
+
+RewriteRule ^SignUp /system/index.php?action=do_signup
+
+RewriteRule ^Forgot-Password /system/forgot-password.php?action=send_password
+
+RewriteRule ^Password-Update /system/forgot-password.php?action=update_password
+
+RewriteRule ^Employee-Detail /system/index.php?action=add_employee
+
+RewriteRule ^Employer-Detail /system/index.php?action=add_employer
+
+RewriteRule ^Legal-Detail /system/index.php?action=add_legaldetails
+
+RewriteRule ^Non-ProfitDetail /system/index.php?action=add_npdetails
+
+RewriteRule ^Additional-Detail /system/index.php?action=add_addndetails
+
+RewriteRule ^Search /system/index.php?action=result_search
+
+RewriteRule ^Change-Password /system/index.php?action=change_password
+
+RewriteRule ^Export-Report /system/index.php?action=export_report
+
+RewriteRule ^Document/(.*) /system/index.php?action=view_files&EmployeeID=$1&%{QUERY_STRING}
+
+RewriteRule ^Reset-Password/(.*) /system/forgot-password.php?action=reset_password&fp_key=$1&%{QUERY_STRING}
+
+RewriteRule ^View-Employee-Detail/(.*) /system/index.php?action=view_employee&EmployeeID=$1&%{QUERY_STRING}
+
+RewriteRule ^View-Employer-Detail/(.*) /system/index.php?action=view_employer&EmployeeID=$1&%{QUERY_STRING}
+
+RewriteRule ^View-Legal-Detail/(.*) /system/index.php?action=view_legaldetails&EmployeeID=$1&%{QUERY_STRING}
+
+RewriteRule ^View-NP-Detail/(.*) /system/index.php?action=view_npdetails&EmployeeID=$1&%{QUERY_STRING}
+
+RewriteRule ^View-Addition-Detail/(.*) /system/index.php?action=view_addndetails&EmployeeID=$1&%{QUERY_STRING}
+
+RewriteRule ^Print/(.*) /system/index.php?action=print_log&EmployeeID=$1&%{QUERY_STRING}
+
+RewriteRule ^Notes/(.*) /system/index.php?action=print_notes&EmployeeID=$1&%{QUERY_STRING}
+
+RewriteRule ^Logout /system/index.php?action=logout
+
+</IfModule>

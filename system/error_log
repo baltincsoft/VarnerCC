@@ -1,0 +1,12 @@
+[06-Apr-2015 13:37:09 America/Denver] PHP Parse error:  syntax error, unexpected end of file in /home1/vccservi/public_html/varnercc/system/index.php on line 868
+[07-Apr-2015 10:44:48 America/Denver] PHP Parse error:  syntax error, unexpected end of file in /home1/vccservi/public_html/varnercc/system/index.php on line 1710
+[07-Apr-2015 11:27:33 America/Denver] PHP Parse error:  syntax error, unexpected end of file in /home1/vccservi/public_html/varnercc/system/index.php on line 27
+[07-Apr-2015 12:04:59 America/Denver] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or '$' in /home1/vccservi/public_html/varnercc/system/index.php on line 270
+[08-Apr-2015 12:11:21 America/Denver] PHP Parse error:  syntax error, unexpected end of file in /home1/vccservi/public_html/varnercc/system/index.php on line 334
+[08-Apr-2015 12:11:24 America/Denver] PHP Parse error:  syntax error, unexpected end of file in /home1/vccservi/public_html/varnercc/system/index.php on line 1585
+[08-Apr-2015 12:20:30 America/Denver] PHP Parse error:  syntax error, unexpected end of file in /home1/vccservi/public_html/varnercc/system/index.php on line 767
+[08-Apr-2015 12:27:36 America/Denver] PHP Parse error:  syntax error, unexpected end of file in /home1/vccservi/public_html/varnercc/system/index.php on line 1281
+[08-Apr-2015 12:27:36 America/Denver] PHP Parse error:  syntax error, unexpected end of file in /home1/vccservi/public_html/varnercc/system/index.php on line 1281
+[08-Apr-2015 12:41:49 America/Denver] PHP Parse error:  syntax error, unexpected end of file, expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN) in /home1/vccservi/public_html/varnercc/system/index.php on line 1370
+[09-Apr-2015 11:26:45 America/Denver] PHP Parse error:  syntax error, unexpected end of file, expecting ')' in /home1/vccservi/public_html/varnercc/system/index.php on line 196
+[09-Apr-2015 11:26:46 America/Denver] PHP Parse error:  syntax error, unexpected '=', expecting ')' in /home1/vccservi/public_html/varnercc/system/index.php on line 729
