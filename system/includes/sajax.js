@@ -137,6 +137,13 @@ var updateNote = function(NoteID,EmployeeID)
     Ajax_Call(strPost,"iNotes-Data","update_note");
 }
 
+var popNpDetailInfo = function(NoteID,npDetailID)
+{
+    var strPost = "EmployeeID="+npDetailID;
+    Ajax_Call(strPost,"lNPDetail-Data","load_EmpNotes");
+	//$('#view_npDetail').modal('show');
+}
+
 var deleteNote = function(NoteID,EmployeeID)
 {
     var strPost = "NoteID="+NoteID+"&EmployeeID="+EmployeeID;
