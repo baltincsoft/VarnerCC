@@ -161,6 +161,11 @@ a,a:focus, a:hover, a:active {
   outline: 0;
 }
 
+.npdetail-button,.npdetail-button:hover,.npdetail-button:active{
+	font-size: 30px;
+	text-decoration:none;
+    color: brown;
+}
 /***
 IE8 fix for form input height in fluid rows
 ***/

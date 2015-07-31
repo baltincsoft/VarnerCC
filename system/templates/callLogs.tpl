@@ -2,7 +2,7 @@
     <table width='100%' align='center'>
         {if $tot_note_rows>0}
         {foreach $Notes as $L}
-        <tr>
+		<tr>
             <td>{$L.Initial}</td>
             <td>{$L.LastUpdatedDate}</td>
             <td colspan="4"></td>
@@ -16,8 +16,9 @@
                     <input type="text" class="m-wrap span12" onClick='javascript:addOrUpdateRecord({$L.NoteID})' id='logDesc_{$L.NoteID}' value='{$L.NoteDescription}' style="margin:0px;" /> 
                 </div>
             </td>
-            <td style="width:10%;" align="center">
-                <a href="#" onClick="javascript:popNpDetailInfo({$L.NoteID},{$EmployeeID})" data-dismiss="modal" data-toggle="modal" data-target="#view_npDetail">view detail</a>		
+			<td style="width:10%;" align="center">
+                <a href="#" class="npdetail-button" onClick="javascript:popNpDetailInfo({$L.NoteID},{$EmployeeID})" data-dismiss="modal" data-toggle="modal" data-target="#view_npDetail" alt="Non Profit Detail" title="Non Profit Detail"><i class="icon-user"></i></a> 
+				
             </td>
             <td>
                 <a href='#' class="btn green" onClick='javascript:updateLog({$L.NoteID},{$EmployeeID})'>Update</a>

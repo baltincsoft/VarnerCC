@@ -140,8 +140,7 @@ var updateNote = function(NoteID,EmployeeID)
 var popNpDetailInfo = function(NoteID,npDetailID)
 {
     var strPost = "EmployeeID="+npDetailID;
-    Ajax_Call(strPost,"lNPDetail-Data","load_EmpNotes");
-	//$('#view_npDetail').modal('show');
+    Ajax_Call(strPost,"lNPDetail-Data","load_npdetail");
 }
 
 var deleteNote = function(NoteID,EmployeeID)

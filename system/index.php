@@ -22,7 +22,7 @@ $func_ary=array("show_login","do_login","do_signup","add_employee","save_employe
                 ,"add_contact","result_search","do_search","save_note","view_notes","update_note","delete_note","print_notes"
                 ,"save_log","view_logs","update_log","delete_log","print_log","view_files","upload_file","delete_upload_file"
                 ,"add_nonprofit_detail","search_employer","change_password","update_password","load_EmpNotes"
-                ,"export_data","export_employee_data","export_report","logout");
+                ,"load_npdetail","export_data","export_employee_data","export_report","logout");
 
 global $SignIN;
 
@@ -1562,6 +1562,34 @@ function load_EmpNotes()
     $SMARTY = new Smarty();
     $SMARTY->assign(array("FullText"=>$FullText));
     echo $SMARTY->display('loadNotes.tpl');
+}
+
+function load_npdetail()
+{
+	global $SERVER_PATH,$SignIN;
+    $R=DIN_ALL($_REQUEST);
+	$npDetail = array();
+
+    if(($_SESSION['UserID']<=0 || $_SESSION['UserID']=="") && $_SESSION['http_agent']!=$_SERVER['HTTP_USER_AGENT'])
+    {
+        header("Location:".$SignIN);
+        die();
+    }
+    else
+    {
+        if(intval($R['EmployeeID'])>0)
+        {
+            $FullText = "";
+            $SQL = "SELECT NonProfit,DoNotCall,NPPCFirstName,NPPCLastName,NPPCAddress,NPPCCity,NPPCZip,NPPCPhone,
+					NPPCExtension,NPPCEmail,State FROM vcc_npdetails LEFT JOIN vcc_states ON NPPCState = StateID
+					WHERE EmployeeID=".$R[EmployeeID].";";
+            eqi($SQL,$rs);       
+			$npDetail = mfai($rs);
+        }
+    }
+    $SMARTY = new Smarty();
+    $SMARTY->assign($npDetail);
+    echo $SMARTY->display('npdetail.tpl');
 }
 function print_notes($msg="",$error_msg="")
 {
